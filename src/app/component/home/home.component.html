@@ -1,0 +1,28 @@
+<div class="card">
+  <div class="card-header bg-black">
+    <button class="btn btn-sm bg-red" (click)="createEmp()">Create Employee</button>
+  </div>
+  <div class="card-body">
+    <table class="table table-hover">
+      <thead class="bg-red">
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Gender</th>
+          <th>Date of birth</th>
+          <th>Department</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let e of empList | paginate: { itemsPerPage: 5, currentPage: p }">
+          <td>{{e.firstName}}</td>
+          <td>{{e.lastName}}</td>
+          <td>{{e.gender}}</td>
+          <td>{{e.dob}}</td>
+          <td>{{e.department}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</div>

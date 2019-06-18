@@ -1,0 +1,13 @@
+.bg-red {
+    background-color: #e9041e;
+    color: beige;
+}
+
+.bg-black {
+    background-color: black;
+    color: beige;
+}
+
+.border-red {
+    border: 1px solid #e9041e;
+}

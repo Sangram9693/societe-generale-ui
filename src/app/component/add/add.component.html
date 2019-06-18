@@ -1,0 +1,33 @@
+<div class="card">
+  <div class="card-header bg-black">
+    <button class="btn btn-sm bg-red" (click)="backToList()">Back To List</button>
+  </div>
+  <div class="card-body">
+    <form>
+      <div class="form-group">
+        <label for="firstName">First Name <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="firstName" placeholder="Enter first name" name="firstName" [(ngModel)] = "emp.firstName" [ngStyle]="{'border': fnErr ? '1px solid #e9041e' : '' }"/>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="lastName" placeholder="Enter last name" name="lastName" [(ngModel)] = "emp.lastName" [ngStyle]="{'border': lnErr ? '1px solid #e9041e' : '' }"/>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender <span class="text-danger">*</span></label>
+        <select class="form-control" id="gender"  [(ngModel)] = "emp.gender" name="gender" [ngStyle]="{'border': genErr ? '1px solid #e9041e' : '' }">
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+      </div>
+      <div class="form-group">
+          <label for="dob">Date of birth <span class="text-danger">*</span></label>
+          <input type="date" class="form-control" id="dob"  [(ngModel)] = "emp.dob" name="dob" [ngStyle]="{'border': dobErr ? '1px solid #e9041e' : '' }"/>
+      </div>
+      <div class="form-group">
+        <label for="dept">Department <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="dept" placeholder="Enter department" name="department" [(ngModel)] = "emp.department" [ngStyle]="{'border': deptErr ? '1px solid #e9041e' : '' }"/>
+      </div>
+      <button type="button" class="btn btn-sm bg-red" (click)="saveData()">Submit</button>
+    </form>
+  </div>
+</div>
